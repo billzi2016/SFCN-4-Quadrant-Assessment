@@ -1,0 +1,85 @@
+training:
+  batch_size: 8
+  max_epochs: 1000
+  patience: 5
+  learning_rate: 1.0e-4
+  weight_decay: 1.0e-4
+  log_interval: 100
+  device: cuda
+  seed: 42
+
+data_loader:
+  # auto: macOS/Darwin uses 0 to avoid DataLoader multiprocessing hangs.
+  # Linux uses max(1, cpu_count // 4).
+  num_workers: auto
+
+paths:
+  real_root: /Volumes/LuZhang16T/IU_Datasets
+  generated_root: /Volumes/LuZhang16T/generated_mri
+
+experiments:
+  q1_real_gen:
+    quadrant: q1_separated_matched
+    output_dir: outputs/q1_separated_matched/real-gen
+    train_manifest: outputs/q1_separated_matched/real-gen/manifests/real_train_manifest.csv
+    val_manifest: outputs/q1_separated_matched/real-gen/manifests/real_val_manifest.csv
+    splits:
+      real_val: outputs/q1_separated_matched/real-gen/manifests/real_val_manifest.csv
+      generated_test: outputs/q1_separated_matched/real-gen/manifests/generated_test_manifest.csv
+
+  q1_gen_real:
+    quadrant: q1_separated_matched
+    output_dir: outputs/q1_separated_matched/gen-real
+    train_manifest: outputs/q1_separated_matched/gen-real/manifests/generated_train_manifest.csv
+    val_manifest: outputs/q1_separated_matched/gen-real/manifests/generated_val_manifest.csv
+    splits:
+      generated_val: outputs/q1_separated_matched/gen-real/manifests/generated_val_manifest.csv
+      real_test: outputs/q1_separated_matched/gen-real/manifests/real_test_manifest.csv
+
+  q2_real_gen:
+    quadrant: q2_separated_gen_balanced
+    output_dir: outputs/q2_separated_gen_balanced/real-gen
+    train_manifest: outputs/q2_separated_gen_balanced/real-gen/manifests/real_train_manifest.csv
+    val_manifest: outputs/q2_separated_gen_balanced/real-gen/manifests/real_val_manifest.csv
+    splits:
+      real_val: outputs/q2_separated_gen_balanced/real-gen/manifests/real_val_manifest.csv
+      generated_test: outputs/q2_separated_gen_balanced/real-gen/manifests/generated_test_manifest.csv
+
+  q2_gen_real:
+    quadrant: q2_separated_gen_balanced
+    output_dir: outputs/q2_separated_gen_balanced/gen-real
+    train_manifest: outputs/q2_separated_gen_balanced/gen-real/manifests/generated_train_manifest.csv
+    val_manifest: outputs/q2_separated_gen_balanced/gen-real/manifests/generated_val_manifest.csv
+    splits:
+      generated_val: outputs/q2_separated_gen_balanced/gen-real/manifests/generated_val_manifest.csv
+      real_test: outputs/q2_separated_gen_balanced/gen-real/manifests/real_test_manifest.csv
+
+  q3_mixed:
+    quadrant: q3_mixed_matched
+    output_dir: outputs/q3_mixed_matched/mixed
+    train_manifest: outputs/q3_mixed_matched/manifests/mixed_train_manifest.csv
+    val_manifest: outputs/q3_mixed_matched/manifests/mixed_val_manifest.csv
+    splits:
+      real_test: outputs/q3_mixed_matched/manifests/real_test_manifest.csv
+      generated_test: outputs/q3_mixed_matched/manifests/generated_test_manifest.csv
+
+  q4_mixed:
+    quadrant: q4_mixed_peak_valley
+    output_dir: outputs/q4_mixed_peak_valley/mixed
+    train_manifest: outputs/q4_mixed_peak_valley/manifests/mixed_train_manifest.csv
+    val_manifest: outputs/q4_mixed_peak_valley/manifests/mixed_val_manifest.csv
+    splits:
+      real_test: outputs/q4_mixed_peak_valley/manifests/real_test_manifest.csv
+      generated_test: outputs/q4_mixed_peak_valley/manifests/generated_test_manifest.csv
+
+quadrants:
+  q1:
+    - q1_real_gen
+    - q1_gen_real
+  q2:
+    - q2_real_gen
+    - q2_gen_real
+  q3:
+    - q3_mixed
+  q4:
+    - q4_mixed
