@@ -132,7 +132,7 @@ python3 main.py build-manifests --quadrant all --force
 - 已完成的 manifest/checkpoint/prediction/figure 不重复生成。
 - 除非显式 `--force`，不覆盖已有结果。
 
-所有命令都假设当前目录已经是 `/Users/bizi/Documents/Fang/mri/SFCN`。
+所有命令都假设当前目录已经是仓库根目录。
 
 ### 单独运行每个象限
 
