@@ -1,6 +1,6 @@
 # SFCN 四象限实验报告
 
-本文件用于集中查看 SFCN 四象限实验结果。对应实验尚未完成时，部分图片可能暂时不存在；这里仍保留最终路径，等训练、推理和画图完成后会自动成为完整报告。
+本文件用于集中查看 SFCN 四象限实验结果。
 
 ## 四象限定义
 
@@ -24,57 +24,117 @@
 
 ### 1. Q1 Real 训练，Generated 测试
 
+#### 男性
+
 ![Q1 Real to Generated Male](outputs/q1_separated_matched/real-gen/figures/male_age_bin_mae.png)
 
-男性图：`outputs/q1_separated_matched/real-gen/figures/male_age_bin_mae.png`
+图片路径：`outputs/q1_separated_matched/real-gen/figures/male_age_bin_mae.png`
 
-女性图：`outputs/q1_separated_matched/real-gen/figures/female_age_bin_mae.png`
+说明：Real 数据训练、Generated 数据测试时，男性样本的年龄分箱 MAE 与样本数量。
+
+#### 女性
+
+![Q1 Real to Generated Female](outputs/q1_separated_matched/real-gen/figures/female_age_bin_mae.png)
+
+图片路径：`outputs/q1_separated_matched/real-gen/figures/female_age_bin_mae.png`
+
+说明：Real 数据训练、Generated 数据测试时，女性样本的年龄分箱 MAE 与样本数量。
 
 ### 2. Q1 Generated 训练，Real 测试
 
+#### 男性
+
 ![Q1 Generated to Real Male](outputs/q1_separated_matched/gen-real/figures/male_age_bin_mae.png)
 
-男性图：`outputs/q1_separated_matched/gen-real/figures/male_age_bin_mae.png`
+图片路径：`outputs/q1_separated_matched/gen-real/figures/male_age_bin_mae.png`
 
-女性图：`outputs/q1_separated_matched/gen-real/figures/female_age_bin_mae.png`
+说明：Generated 数据训练、Real 数据测试时，男性样本的年龄分箱 MAE 与样本数量。
+
+#### 女性
+
+![Q1 Generated to Real Female](outputs/q1_separated_matched/gen-real/figures/female_age_bin_mae.png)
+
+图片路径：`outputs/q1_separated_matched/gen-real/figures/female_age_bin_mae.png`
+
+说明：Generated 数据训练、Real 数据测试时，女性样本的年龄分箱 MAE 与样本数量。
 
 ## Q2：分开训练 + Generated 年龄分布均衡
 
 ### 3. Q2 Real 训练，Generated-Balanced 测试
 
+#### 男性
+
 ![Q2 Real to Generated-Balanced Male](outputs/q2_separated_gen_balanced/real-gen/figures/male_age_bin_mae.png)
 
-男性图：`outputs/q2_separated_gen_balanced/real-gen/figures/male_age_bin_mae.png`
+图片路径：`outputs/q2_separated_gen_balanced/real-gen/figures/male_age_bin_mae.png`
 
-女性图：`outputs/q2_separated_gen_balanced/real-gen/figures/female_age_bin_mae.png`
+说明：Real 数据训练、年龄分布均衡的 Generated 数据测试时，男性样本的年龄分箱 MAE 与样本数量。
+
+#### 女性
+
+![Q2 Real to Generated-Balanced Female](outputs/q2_separated_gen_balanced/real-gen/figures/female_age_bin_mae.png)
+
+图片路径：`outputs/q2_separated_gen_balanced/real-gen/figures/female_age_bin_mae.png`
+
+说明：Real 数据训练、年龄分布均衡的 Generated 数据测试时，女性样本的年龄分箱 MAE 与样本数量。
 
 ### 4. Q2 Generated-Balanced 训练，Real 测试
 
+#### 男性
+
 ![Q2 Generated-Balanced to Real Male](outputs/q2_separated_gen_balanced/gen-real/figures/male_age_bin_mae.png)
 
-男性图：`outputs/q2_separated_gen_balanced/gen-real/figures/male_age_bin_mae.png`
+图片路径：`outputs/q2_separated_gen_balanced/gen-real/figures/male_age_bin_mae.png`
 
-女性图：`outputs/q2_separated_gen_balanced/gen-real/figures/female_age_bin_mae.png`
+说明：年龄分布均衡的 Generated 数据训练、Real 数据测试时，男性样本的年龄分箱 MAE 与样本数量。
+
+#### 女性
+
+![Q2 Generated-Balanced to Real Female](outputs/q2_separated_gen_balanced/gen-real/figures/female_age_bin_mae.png)
+
+图片路径：`outputs/q2_separated_gen_balanced/gen-real/figures/female_age_bin_mae.png`
+
+说明：年龄分布均衡的 Generated 数据训练、Real 数据测试时，女性样本的年龄分箱 MAE 与样本数量。
 
 ## Q3：混合训练 + 年龄分布匹配
 
 ### 5. Q3 Mixed Matched
 
+#### 男性
+
 ![Q3 Mixed Matched Male](outputs/q3_mixed_matched/mixed/figures/male_age_bin_mae.png)
 
-男性图：`outputs/q3_mixed_matched/mixed/figures/male_age_bin_mae.png`
+图片路径：`outputs/q3_mixed_matched/mixed/figures/male_age_bin_mae.png`
 
-女性图：`outputs/q3_mixed_matched/mixed/figures/female_age_bin_mae.png`
+说明：Real 与 Generated 年龄分布匹配并混合训练时，男性样本的年龄分箱 MAE 与样本数量。
+
+#### 女性
+
+![Q3 Mixed Matched Female](outputs/q3_mixed_matched/mixed/figures/female_age_bin_mae.png)
+
+图片路径：`outputs/q3_mixed_matched/mixed/figures/female_age_bin_mae.png`
+
+说明：Real 与 Generated 年龄分布匹配并混合训练时，女性样本的年龄分箱 MAE 与样本数量。
 
 ## Q4：混合训练 + 削峰填谷均衡
 
 ### 6. Q4 Mixed Peak-Valley Balanced
 
+#### 男性
+
 ![Q4 Mixed Peak-Valley Balanced Male](outputs/q4_mixed_peak_valley/mixed/figures/male_age_bin_mae.png)
 
-男性图：`outputs/q4_mixed_peak_valley/mixed/figures/male_age_bin_mae.png`
+图片路径：`outputs/q4_mixed_peak_valley/mixed/figures/male_age_bin_mae.png`
 
-女性图：`outputs/q4_mixed_peak_valley/mixed/figures/female_age_bin_mae.png`
+说明：削峰填谷均衡后混合训练时，男性样本的年龄分箱 MAE 与样本数量。
+
+#### 女性
+
+![Q4 Mixed Peak-Valley Balanced Female](outputs/q4_mixed_peak_valley/mixed/figures/female_age_bin_mae.png)
+
+图片路径：`outputs/q4_mixed_peak_valley/mixed/figures/female_age_bin_mae.png`
+
+说明：削峰填谷均衡后混合训练时，女性样本的年龄分箱 MAE 与样本数量。
 
 ## 状态检查命令
 

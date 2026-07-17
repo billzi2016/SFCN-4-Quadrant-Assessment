@@ -1,6 +1,6 @@
 # SFCN Four-Quadrant Experiment Report
 
-This file collects the SFCN four-quadrant experiment results. Some figures may be missing until training, inference, and plotting are complete; the final paths are kept here so the report becomes complete automatically after the workflow finishes.
+This file collects the SFCN four-quadrant experiment results.
 
 ## Quadrant Definitions
 
@@ -24,57 +24,117 @@ This file collects the SFCN four-quadrant experiment results. Some figures may b
 
 ### 1. Q1 Real Training, Generated Testing
 
+#### Male
+
 ![Q1 Real to Generated Male](outputs/q1_separated_matched/real-gen/figures/male_age_bin_mae.png)
 
-Male figure: `outputs/q1_separated_matched/real-gen/figures/male_age_bin_mae.png`
+Figure path: `outputs/q1_separated_matched/real-gen/figures/male_age_bin_mae.png`
 
-Female figure: `outputs/q1_separated_matched/real-gen/figures/female_age_bin_mae.png`
+Description: Male age-bin MAE and sample counts for real-data training and generated-data testing.
+
+#### Female
+
+![Q1 Real to Generated Female](outputs/q1_separated_matched/real-gen/figures/female_age_bin_mae.png)
+
+Figure path: `outputs/q1_separated_matched/real-gen/figures/female_age_bin_mae.png`
+
+Description: Female age-bin MAE and sample counts for real-data training and generated-data testing.
 
 ### 2. Q1 Generated Training, Real Testing
 
+#### Male
+
 ![Q1 Generated to Real Male](outputs/q1_separated_matched/gen-real/figures/male_age_bin_mae.png)
 
-Male figure: `outputs/q1_separated_matched/gen-real/figures/male_age_bin_mae.png`
+Figure path: `outputs/q1_separated_matched/gen-real/figures/male_age_bin_mae.png`
 
-Female figure: `outputs/q1_separated_matched/gen-real/figures/female_age_bin_mae.png`
+Description: Male age-bin MAE and sample counts for generated-data training and real-data testing.
+
+#### Female
+
+![Q1 Generated to Real Female](outputs/q1_separated_matched/gen-real/figures/female_age_bin_mae.png)
+
+Figure path: `outputs/q1_separated_matched/gen-real/figures/female_age_bin_mae.png`
+
+Description: Female age-bin MAE and sample counts for generated-data training and real-data testing.
 
 ## Q2: Separated Training + Generated-Balanced Age Distribution
 
 ### 3. Q2 Real Training, Generated-Balanced Testing
 
+#### Male
+
 ![Q2 Real to Generated-Balanced Male](outputs/q2_separated_gen_balanced/real-gen/figures/male_age_bin_mae.png)
 
-Male figure: `outputs/q2_separated_gen_balanced/real-gen/figures/male_age_bin_mae.png`
+Figure path: `outputs/q2_separated_gen_balanced/real-gen/figures/male_age_bin_mae.png`
 
-Female figure: `outputs/q2_separated_gen_balanced/real-gen/figures/female_age_bin_mae.png`
+Description: Male age-bin MAE and sample counts for real-data training and age-balanced generated-data testing.
+
+#### Female
+
+![Q2 Real to Generated-Balanced Female](outputs/q2_separated_gen_balanced/real-gen/figures/female_age_bin_mae.png)
+
+Figure path: `outputs/q2_separated_gen_balanced/real-gen/figures/female_age_bin_mae.png`
+
+Description: Female age-bin MAE and sample counts for real-data training and age-balanced generated-data testing.
 
 ### 4. Q2 Generated-Balanced Training, Real Testing
 
+#### Male
+
 ![Q2 Generated-Balanced to Real Male](outputs/q2_separated_gen_balanced/gen-real/figures/male_age_bin_mae.png)
 
-Male figure: `outputs/q2_separated_gen_balanced/gen-real/figures/male_age_bin_mae.png`
+Figure path: `outputs/q2_separated_gen_balanced/gen-real/figures/male_age_bin_mae.png`
 
-Female figure: `outputs/q2_separated_gen_balanced/gen-real/figures/female_age_bin_mae.png`
+Description: Male age-bin MAE and sample counts for age-balanced generated-data training and real-data testing.
+
+#### Female
+
+![Q2 Generated-Balanced to Real Female](outputs/q2_separated_gen_balanced/gen-real/figures/female_age_bin_mae.png)
+
+Figure path: `outputs/q2_separated_gen_balanced/gen-real/figures/female_age_bin_mae.png`
+
+Description: Female age-bin MAE and sample counts for age-balanced generated-data training and real-data testing.
 
 ## Q3: Mixed Training + Matched Age Distribution
 
 ### 5. Q3 Mixed Matched
 
+#### Male
+
 ![Q3 Mixed Matched Male](outputs/q3_mixed_matched/mixed/figures/male_age_bin_mae.png)
 
-Male figure: `outputs/q3_mixed_matched/mixed/figures/male_age_bin_mae.png`
+Figure path: `outputs/q3_mixed_matched/mixed/figures/male_age_bin_mae.png`
 
-Female figure: `outputs/q3_mixed_matched/mixed/figures/female_age_bin_mae.png`
+Description: Male age-bin MAE and sample counts for mixed training under matched real/generated age distributions.
+
+#### Female
+
+![Q3 Mixed Matched Female](outputs/q3_mixed_matched/mixed/figures/female_age_bin_mae.png)
+
+Figure path: `outputs/q3_mixed_matched/mixed/figures/female_age_bin_mae.png`
+
+Description: Female age-bin MAE and sample counts for mixed training under matched real/generated age distributions.
 
 ## Q4: Mixed Training + Peak-Valley Balanced Distribution
 
 ### 6. Q4 Mixed Peak-Valley Balanced
 
+#### Male
+
 ![Q4 Mixed Peak-Valley Balanced Male](outputs/q4_mixed_peak_valley/mixed/figures/male_age_bin_mae.png)
 
-Male figure: `outputs/q4_mixed_peak_valley/mixed/figures/male_age_bin_mae.png`
+Figure path: `outputs/q4_mixed_peak_valley/mixed/figures/male_age_bin_mae.png`
 
-Female figure: `outputs/q4_mixed_peak_valley/mixed/figures/female_age_bin_mae.png`
+Description: Male age-bin MAE and sample counts for mixed training under peak-valley balancing.
+
+#### Female
+
+![Q4 Mixed Peak-Valley Balanced Female](outputs/q4_mixed_peak_valley/mixed/figures/female_age_bin_mae.png)
+
+Figure path: `outputs/q4_mixed_peak_valley/mixed/figures/female_age_bin_mae.png`
+
+Description: Female age-bin MAE and sample counts for mixed training under peak-valley balancing.
 
 ## Status Check
 
